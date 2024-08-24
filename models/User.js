@@ -1,4 +1,4 @@
-// Importing Mongoose Moedels
+// Importing Mongoose Models
 const { Schema, model } = require('mongoose');
 
 // Schema to create User model

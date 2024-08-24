@@ -7,7 +7,9 @@ const {
   getSingleUser,
   createUser,
   updateUser,
-  deleteUser
+  deleteUser,
+  addFriend,
+  removeFriend
 } = require('../../controllers/userController');
 
           // Setting Controller End Points 
@@ -23,6 +25,12 @@ router
   .get(getSingleUser)
   .put(updateUser)
   .delete(deleteUser);
+
+// /api/users/:userId/friends/:friendId
+router
+  .route('/:userId/friends/:friendId')
+  .post(addFriend)
+  .delete(removeFriend);
 
 // Exporting the Router
 module.exports = router;
